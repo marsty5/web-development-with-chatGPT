@@ -8,6 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: Arial, sans-serif; background-color: #e0f3fa; }
+        .bounce-twice {
+            animation: bounce 1s ease infinite;
+            animation-iteration-count: 2;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
     </style>
 </head>
 <body class="bg-[#e0f3fa] text-[#1a2b44]">
@@ -15,9 +23,9 @@
     <!-- Hero Banner -->
     <section class="w-full h-screen bg-cover bg-center relative" style="background-image: url('https://bairesdev.mo.cloudinary.net/blog/2020/12/Why-are-programmers-falling-in-love-again-with-functional-programming.png?tx=w_1920,q_auto');">
       <div class="absolute inset-0 bg-black opacity-50"></div>
-      <div class="relative z-10 flex items-center justify-center h-full text-white text-center px-4 animate-bounce">
+      <div class="relative z-10 flex items-center justify-center h-full text-white text-center px-4">
           <div>
-              <h1 class="text-5xl font-extrabold mb-4">Ready to Launch Your Website?</h1>
+              <h1 class="text-5xl font-extrabold mb-4 bounce-twice">Ready to Launch Your Website?</h1>
               <p class="text-2xl mb-6">Learn Web Development using AI tools. Secure your spot in our upcoming workshops now!</p>
               <a href="#register" class="bg-[#ffd85c] text-[#1a2b44] px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-[#ffbb00] transition duration-300">Register Your Interest</a>
           </div>
